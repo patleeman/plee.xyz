@@ -1,23 +1,11 @@
-
-
 $(document).ready(function(){
-  // Get pathname
-  pathname = window.location.pathname
-  path_split = pathname.split("/")
-  path = path_split[path_split.length - 1]
+  output = "<ul>"
 
-  destination_url = lookup_path(path)
-
-  if (destination_url && destination_url != undefined){
-    $(location).attr("href", destination_url);
-  } else {
-    $(location).attr("href", "notfound.html");
+  for (var short in URL_LOOKUP){
+    output = output + "<li><a href=" + URL_LOOKUP[short] + ">" + short + "</a></li>"
   }
 
-});
-
-// Lookup path in data file
-function lookup_path(key) {
-  url = URL_LOOKUP[key];
-  return url;
-}
+  output = output + "</ul>";
+  console.log(output);
+  $(".urllist").html(output);
+})
