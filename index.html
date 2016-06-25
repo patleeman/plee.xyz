@@ -8,7 +8,7 @@
     $(document).ready(function(){
       output = "<ul>"
       for (var short in URL_LOOKUP){
-        output = output + "<li><a href=" + URL_LOOKUP[short] + ">" + short + "</a></li>"
+        output = output + "<li>" + short + ": <a href=" + URL_LOOKUP[short] + ">" + URL_LOOKUP[short] + "</a></li>"
       }
       output = output + "</ul>";
       console.log(output);
@@ -16,6 +16,11 @@
     })
 
   </script>
+  <style>{
+  body {
+    font-family: sans-serif;
+  }
+  </style>
 </header>
   <body>
     <h1>Plee.xyz Url Shortener</h1>
