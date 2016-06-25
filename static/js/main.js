@@ -4,6 +4,6 @@ $(document).ready(function(){
   //$(location).attr("href", redirect_url);
 
   pathname = window.location.pathname;
-  console.log(pathname);
+  console.log(pathname.split("/")[-1]);
 
 });
