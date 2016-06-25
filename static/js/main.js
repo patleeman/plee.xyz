@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
   var redirect_url;
   redirect_url = $('#redirect_url').html();
@@ -19,6 +21,7 @@ function path_lookup(key) {
   if (url){
     return url;
   } else {
+    console.log(url);
     return null;
   }
 }
