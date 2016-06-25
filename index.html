@@ -3,8 +3,19 @@
   <title>plee.xyz</title>
   <script src="//code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
   <script src="static/data.js" type="text/javascript"></script>
-  <script src="static/js/main.js" type="text/javascript"></script>
-  <link rel="stylesheet" type="text/css" href="static/css/main.css">
+  <script>
+
+    $(document).ready(function(){
+      output = "<ul>"
+      for (var short in URL_LOOKUP){
+        output = output + "<li><a href=" + URL_LOOKUP[short] + ">" + short + "</a></li>"
+      }
+      output = output + "</ul>";
+      console.log(output);
+      $(".urllist").html(output);
+    })
+
+  </script>
 </header>
   <body>
     <h1>Plee.xyz Url Shortener</h1>
